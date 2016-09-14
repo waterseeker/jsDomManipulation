@@ -35,11 +35,9 @@ function addSquare() {
     square.addEventListener('click', getRandomColor);
     square.addEventListener('mouseover', displayNumber);
     square.addEventListener('mouseout', removeNumber);
-    square.addEventListener('dblclick', removeSquare, messageMe);
-    //checking to see if siblings exist
-    square.addEventListener('nextSquareSibling == undefined', messageMe);
-    square.addEventListener('previousSquareSibling == undefined', messageMe);
-    //put the square on the page this should be the last line in the main function so the squares correctly receive all of the properties and listeners when they are generated
+    square.addEventListener('dblclick', removeSquare);
+
+    //put the square on the page
     document.body.appendChild(square);
 
 
@@ -72,15 +70,4 @@ function addSquare() {
     }
 
     }
-// if there is no next sibling
-    function messageMe() {
-        if (nextElementSibling == 'null') {
-  alert("Element does not exist");
-}
-    if (previousElementSibling == 'null')
-{
-     alert("Element does not exist")
-  //if next sibling is available
-}
-    }
-};
+    };
