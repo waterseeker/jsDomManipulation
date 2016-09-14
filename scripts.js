@@ -36,7 +36,8 @@ function addSquare() {
     square.addEventListener('mouseover', displayNumber);
     square.addEventListener('mouseout', removeNumber);
     square.addEventListener('dblclick', removeSquare);
-
+    // event listener for doubleclick to run function for alert
+    square.addEventListener('dblclick', messageMe);
     //put the square on the page
     document.body.appendChild(square);
 
@@ -65,9 +66,20 @@ function addSquare() {
         if (counter % 2 == 0) {
             square.nextElementSibling.remove();
     }
+        if (square.previousElementSibling == btn)
+        null;
+
     else {
             square.previousElementSibling.remove();
     }
 
     }
+// alerts on siblings
+    function messageMe() {
+        if (square.nextElementSibling == undefined)
+            alert('This element does not exist');
+        if (square.previousElementSibling == undefined)
+            alert('This element does not exist');
+    }
+    
     };
